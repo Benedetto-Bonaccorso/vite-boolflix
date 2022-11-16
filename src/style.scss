@@ -13,7 +13,7 @@ body{
   background-color:bisque;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/*
+
 .movie-card:not(:hover)>.movie-info{
   display: none;
 }
@@ -21,16 +21,21 @@ body{
 .movie-card:hover>.movie-img{
   display: none;
 }
-*/
+
 
 .movie-info>*{
   margin: 1rem;
 }
 
+.movie-img{
+
+}
+
 .movie-img,
 .movie-info{
+  border: 2px solid black;
   height: 32vw;
-  width: 20vw;
+  width: 15vw;
   margin-bottom: auto;
   overflow: auto;
 

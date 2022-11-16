@@ -10,6 +10,11 @@
         mounted(){
             console.log(this.state.prova)
         },
+        methods: {
+            starRating(i){
+                return i > 0 ? 'Yes' : 'No'
+            }
+        },
         computed: {
             
         }
@@ -28,7 +33,15 @@
                         <p class="movie-property">Lingua: <span class="language">{{entry.original_language}}</span></p>
                         <img :src="state.imgPath+'/'+entry.original_language+'.png'" alt="" class="lang-flag">
                     </div>
-                    <p class="movie-rating">PLACEHOLDER</p>
+                    <p class="movie-rating">{{Math.round(entry.vote_average / 2)}}/5</p>
+                    <div class="movie-rating d-flex justify-content-center">
+                        <p v-for="index in Math.round(entry.vote_average / 2)">
+                            <i class="fa-solid fa-star"></i>
+                        </p> 
+                        <p v-for="index in 5-Math.round(entry.vote_average / 2)">
+                            <i class="fa-regular fa-star"></i>
+                        </p>
+                    </div>
                 </div>
             </div>
 
