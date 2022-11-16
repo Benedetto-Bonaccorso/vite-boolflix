@@ -13,7 +13,6 @@ body{
   background-color:bisque;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 /*
 .movie-card:not(:hover)>.movie-info{
   display: none;
@@ -23,12 +22,24 @@ body{
   display: none;
 }
 */
+
+.movie-info>*{
+  margin: 1rem;
+}
+
 .movie-img,
 .movie-info{
-  height: 23vw;
-  width: 15vw;
+  height: 32vw;
+  width: 20vw;
+  margin-bottom: auto;
+  overflow: auto;
 
   .language{
     text-transform: uppercase;
+  }
+  .lang-flag{
+    width: 2.5rem;
+    display: block;
+    margin: 1rem auto;
   }
 }
