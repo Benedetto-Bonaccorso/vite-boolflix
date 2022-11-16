@@ -2,10 +2,12 @@
 import axios from 'axios'
 import { state } from './state.js'
 import AppMain from "./components/AppMain.vue"
+import AppHeader from "./components/AppHeader.vue"
 export default {
   name: 'App',
   components: {
-    AppMain
+    AppMain,
+    AppHeader,
   },
   data() {
     return {
@@ -30,7 +32,7 @@ export default {
 
 <template>
 
-  <h1>app</h1>
+  <AppHeader />
   <AppMain />
 
 </template>
