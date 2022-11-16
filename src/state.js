@@ -7,5 +7,5 @@ export const state = reactive({
   entries: null,
   info: null,
   error: null,
-  prova: "aaaaa"
+  path: "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"
 })

@@ -18,11 +18,16 @@
     <div class="container">
         <div class="row">
 
-            <h1>AppMain</h1>
-            <div class="col-2" v-for="entry in state.entries">
-                {{entry.title}}
+            <div class="col-3 movie-card my-2" v-for="(entry,i) in state.entries">
+                <img class="movie-img" :src="state.path+entry.poster_path" :alt="entry.title">
+                <div class="movie-info bg-dark text-white">
+                    <p><span class="movie-property">Titolo:</span> {{entry.title}}</p>
+                    <p><span class="movie-property">Titolo originale:</span> {{entry.original_title}}</p>
+                    <p><span class="movie-property">Lingua:</span> <span class="language">{{entry.original_language}}</span></p>
+                    <p class="movie-rating">PLACEHOLDER</p>
+                </div>
             </div>
-            
+
         </div>
     </div>
         

@@ -5,8 +5,30 @@
   box-sizing: border-box;
 }
 
+img{
+  max-width: 100%;
+}
+
 body{
   background-color:bisque;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/*
+.movie-card:not(:hover)>.movie-info{
+  display: none;
+}
+
+.movie-card:hover>.movie-img{
+  display: none;
+}
+*/
+.movie-img,
+.movie-info{
+  height: 23vw;
+  width: 15vw;
+
+  .language{
+    text-transform: uppercase;
+  }
+}
