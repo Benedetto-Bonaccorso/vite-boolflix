@@ -14,7 +14,10 @@
     <div class="container">
         <div class="row">
             <div class="col-3 movie-card my-2" v-for="(entry,i) in state.entries">
-                <img class="movie-img" :src="state.path+entry.poster_path" :alt="entry.title">
+
+                <img class="movie-img" v-if="entry.poster_path != null" :src="state.path+entry.poster_path" :alt="entry.title">
+                <img class="movie-img" v-else src="https://picsum.photos/id/237/300/450" :alt="entry.title">
+
                 <div class="movie-info bg-dark text-white text-center">
                     <p v-if="state.searchCategory == 'movie'"><span class="movie-property">Titolo:</span> {{entry.title}}</p>
                     <p v-if="state.searchCategory == 'tv'"><span class="movie-property">Titolo:</span> {{entry.name}}</p>
