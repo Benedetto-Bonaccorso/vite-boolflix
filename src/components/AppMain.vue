@@ -6,13 +6,6 @@
             return{
                 state
             }
-        },
-        mounted(){
-        },
-        methods: {
-        },
-        computed: {
-            
         }
     }
 </script>
