@@ -32,7 +32,7 @@ import { state } from '../state.js';
     <div class="headerWrapper d-flex justify-content-between mx-5 my-4">
         <h1 class="title text-white">BoolFlix</h1>
         <div class="searchbar p-2">
-            <input type="text" placeholder="Search" v-model="state.searchText" v-on:keydown.enter="log()">
+            <input type="text" placeholder="Search" v-model="state.searchText" v-on:keydown.enter="search()">
             <button class="px-2" v-on:click="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
             
             <select v-model="state.searchCategory" @change="log()">

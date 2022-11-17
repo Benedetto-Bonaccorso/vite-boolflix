@@ -13,7 +13,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-3 movie-card my-2" v-for="(entry,i) in state.entries">
+            <div class="col-6 col-md-3 movie-card my-2" v-for="(entry,i) in state.entries">
 
                 <img class="movie-img" v-if="entry.poster_path != null" :src="state.path+entry.poster_path" :alt="entry.title">
                 <img class="movie-img" v-else src="https://picsum.photos/id/237/300/450" :alt="entry.title">
@@ -56,20 +56,15 @@
 
 
     .movie-info>*{
-        margin: 1rem;
-    }
-
-    .movie-img{
-
+        padding: 0.5rem 1rem;
     }
 
     .movie-img,
     .movie-info{
-        border: 2px solid black;
-        height: 30vw;
-        width: 18vw;
-        margin-bottom: auto;
-        overflow: auto;
+        border: 1px solid white;
+        height: 50vh;
+        overflow-x: hidden;
+        overflow-y: auto;
 
         .language{
             text-transform: uppercase;
@@ -79,5 +74,9 @@
             display: block;
             margin: 1rem auto;
         }
+    }
+
+    @media (min-width: 768px) { 
+
     }
 </style>
