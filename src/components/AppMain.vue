@@ -16,8 +16,11 @@
             <div class="col-3 movie-card my-2" v-for="(entry,i) in state.entries">
                 <img class="movie-img" :src="state.path+entry.poster_path" :alt="entry.title">
                 <div class="movie-info bg-dark text-white text-center">
-                    <p><span class="movie-property">Titolo:</span> {{entry.title}}</p>
-                    <p><span class="movie-property">Titolo originale:</span> {{entry.original_title}}</p>
+                    <p v-if="state.searchCategory == 'movie'"><span class="movie-property">Titolo:</span> {{entry.title}}</p>
+                    <p v-if="state.searchCategory == 'tv'"><span class="movie-property">Titolo:</span> {{entry.name}}</p>
+                    
+                    <p v-if="state.searchCategory == 'movie'"><span class="movie-property">Titolo originale:</span> {{entry.original_title}}</p>
+                    <p v-if="state.searchCategory == 'tv'"><span class="movie-property">Titolo originale:</span> {{entry.original_name}}</p>
                     <div>
                         <p class="movie-property">Lingua: <span class="language">{{entry.original_language}}</span></p>
                         <img :src="state.imgPath+'/'+entry.original_language+'.png'" alt="" class="lang-flag">
@@ -30,13 +33,12 @@
                             <i class="fa-regular fa-star"></i>
                         </p>
                     </div>
-                    <p><span class="movie-property">Titolo:</span> {{entry.overview}}</p>
+                    <p><span class="movie-property">OverView:</span> {{entry.overview}}</p>
                 </div>
             </div>
 
         </div>
     </div>
-        
 </template>
 
 <style lang="scss" scoped>
