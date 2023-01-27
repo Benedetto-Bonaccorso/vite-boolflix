@@ -13,7 +13,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-6 col-md-3 movie-card my-2" v-for="(entry,i) in state.entries">
+            <div class="col-6 col-md-4 col-lg-3 movie-card my-2" v-for="(entry,i) in state.entries">
 
                 <img class="movie-img" v-if="entry.poster_path != null" :src="state.path+entry.poster_path" :alt="entry.title">
                 <img class="movie-img" v-else src="https://picsum.photos/id/237/300/450" :alt="entry.title">
@@ -26,7 +26,7 @@
                     <p v-if="state.searchCategory == 'tv'"><span class="movie-property">Titolo originale:</span> {{entry.original_name}}</p>
                     <div>
                         <p class="movie-property">Lingua: <span class="language">{{entry.original_language}}</span></p>
-                        <img :src="state.imgPath+'/'+entry.original_language+'.png'" alt="" class="lang-flag">
+                        <img :src="state.imgPath+entry.original_language+'.png'" alt="" class="lang-flag">
                     </div>
                     <div class="movie-rating d-flex justify-content-center">
                         <p v-for="index in Math.round(entry.vote_average / 2)">
